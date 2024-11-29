@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoCreator</name>
+    </assembly>
+    <members>
+        <member name="T:AutoCreator.ControlCreator">
+            <summary>
+            依輸入的物件屬性資料型別，自動在輸入的Form中建立對應的控制項。
+            </summary>
+        </member>
+        <member name="M:AutoCreator.ControlCreator.CreateForm(AutoCreator.ISettings,System.String,System.Boolean)">
+            <summary>
+            依輸入的parameters物件的Property，加入對應資料型別的控制項。最後再加入存儲按鈕，並設為form的AcceptButton(DialogResult=OK)。
+            注意：資料型別若為single且useNumericUpDown=true，會將值限制在正負1之間，若要設定其它值請使用float或double。
+            </summary>
+            <param name="parameters"></param>
+            <param name="filePath">設定檔儲存路徑</param>
+            <param name="useNumericUpDown">數值資料是否使用NumericUpDown控制項</param>
+            <returns></returns>
+        </member>
+        <member name="M:AutoCreator.ControlCreator.AddCtrlByPropertyInfo(System.Windows.Forms.Form,AutoCreator.ISettings,System.String,System.Boolean)">
+            <summary>
+            (資料繫結)
+            將Form中的控制項清空，再加入FlowLayoutPanel並依parameters的Property加入對應資料型別的控制項。最後再加入存儲按鈕，並設為form的AcceptButton(DialogResult=OK)。
+            注意：資料型別若為single且useNumericUpDown=true，會將值限制在正負1之間，若要設定其它值請使用float或double。
+            </summary>
+            <param name="form"></param>
+            <param name="parameters"></param>
+            <param name="filePath">設定檔儲存路徑</param>
+            <param name="useNumericUpDown">數值資料是否使用NumericUpDown控制項</param>
+        </member>
+        <member name="M:AutoCreator.ControlCreator.AddLabelByPropertyInfo(System.Object,System.Windows.Forms.FlowLayoutPanel@)">
+            <summary>
+            將傳入的parameters使用Label呈現在flowPanel中。(資料未繫結)
+            </summary>
+            <param name="profile"></param>
+            <param name="flowPanel"></param>
+        </member>
+        <member name="M:AutoCreator.ControlCreator.AddCtrlByPropertyInfo(System.Object,System.Windows.Forms.FlowLayoutPanel@,System.Boolean)">
+            <summary>
+            (資料繫結)
+            注意：資料型別若為single且useNumericUpDown=true，會將值限制在正負1之間，若要設定其它值請使用float或double。
+            </summary>
+            <param name="parameters"></param>
+            <param name="flowPanel"></param>
+            <param name="useNumericUpDown">數值資料是否使用NumericUpDown控制項</param>
+        </member>
+        <member name="T:AutoCreator.ISettings">
+            <summary>
+            設定檔類別介面
+            </summary>
+        </member>
+        <member name="M:AutoCreator.ISettings.Load``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AutoCreator.ISettings.Save(System.String)">
+            <summary>
+            儲存設定檔
+            </summary>
+            <param name="filePath"></param>
+        </member>
+    </members>
+</doc>

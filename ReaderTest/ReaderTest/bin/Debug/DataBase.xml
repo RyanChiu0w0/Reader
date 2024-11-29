@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataBase</name>
+    </assembly>
+    <members>
+        <member name="M:DataBase.MysqlDB.#ctor(System.String)">
+            <summary>
+            注意：直接傳入連線字串，編譯後會是明碼。應改用MysqlDB(string user,string pw,string server,string database)
+            </summary>
+            <param name="connString"></param>
+        </member>
+        <member name="M:DataBase.MysqlDB.ConnMySqlReturnObj(System.String,System.Object[])">
+            <summary>
+            使用防止SQL Injection的方式執行SQL.
+            </summary>
+            <param name="queryString">查詢字串; 字串中的變數需以" @"開頭。</param>
+            <param name="parameters">參數需照在sql中的順序輸入。</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataBase.MysqlDB.ConnMySqlNonQuery(System.String,System.Object[])">
+            <summary>
+            使用防止SQL Injection的方式執行SQL.
+            </summary>
+            <param name="queryString">查詢字串; 字串中的變數需以" @"開頭。</param>
+            <param name="parameters">參數需照在sql中的順序輸入。</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataBase.MysqlDB.ConnMySqlReturnDataTable(System.String,System.Object[])">
+            <summary>
+            使用防止SQL Injection的方式執行SQL.
+            queryString中，不可使用「in」篩選條件
+            </summary>
+            <param name="queryString">查詢字串; 字串中的變數需以" @"開頭。</param>
+            <param name="parameters">參數需照在sql中的順序輸入。</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataBase.OracleDB.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="connString">ex: "DATA SOURCE = TWOR1.WUS.COM.TW; PASSWORD=***;USER ID = ***" </param>
+        </member>
+        <member name="M:DataBase.OracleDB.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="pass"></param>
+            <param name="host">IP or Hostname</param>
+            <param name="port"></param>
+            <param name="servicename"></param>
+        </member>
+        <member name="M:DataBase.OracleDB.OracleConnString(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            組連線字串
+            </summary>
+            <param name="host"></param>
+            <param name="port">1521</param>
+            <param name="servicename"></param>
+            <param name="user"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataBase.OracleDB.CmdReturnObj(System.String,System.Object[])">
+            <summary>
+            使用防止SQL Injection的方式執行SQL.
+            </summary>
+            <param name="queryString">查詢字串; 字串中的變數需以" :"開頭。</param>
+            <param name="parameters">參數需照在sql中的順序輸入。</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataBase.OracleDB.CmdNonQuery(System.String,System.Object[])">
+            <summary>
+            使用防止SQL Injection的方式執行SQL.
+            </summary>
+            <param name="queryString">查詢字串; 字串中的變數需以" :"開頭。</param>
+            <param name="parameters">參數需照在sql中的順序輸入。</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataBase.OracleDB.CmdReturnDataTable(System.String,System.Object[])">
+            <summary>
+            使用防止SQL Injection的方式執行SQL.
+            </summary>
+            <param name="queryString">查詢字串; 字串中的變數需以" :"開頭。</param>
+            <param name="parameters">參數需照在sql中的順序輸入。</param>
+            <returns></returns>
+        </member>
+        <member name="T:DataBase.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強類型資源類別。
+            </summary>
+        </member>
+        <member name="P:DataBase.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:DataBase.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強類型資源類別的資源查閱。
+            </summary>
+        </member>
+    </members>
+</doc>

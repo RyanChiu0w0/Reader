@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReaderSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ListenIP>169.254.124.170</ListenIP>
+  <ListenPort>9004</ListenPort>
+  <ReaderIP>169.254.0.1</ReaderIP>
+  <ReaderPort>9004</ReaderPort>
+  <Timeout>3000</Timeout>
+</ReaderSettings>

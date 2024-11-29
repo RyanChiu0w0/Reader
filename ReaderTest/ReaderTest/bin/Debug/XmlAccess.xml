@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XmlAccess</name>
+    </assembly>
+    <members>
+        <member name="M:XmlAccess.XmlAccessor.CreateXmlNodeForObject(System.Object,System.Xml.XmlDocument)">
+            <summary>
+            建立傳入物件所有屬性的xml節點
+            </summary>
+            <param name="obj">傳入物件</param>
+            <param name="xmlDoc"></param>
+        </member>
+        <member name="M:XmlAccess.XmlAccessor.createXmlNodeForContainer(System.Windows.Forms.Control,System.Xml.XmlDocument)">
+            <summary>
+            為傳入控制項容器中的控制項建立包含其值之xml節點
+            </summary>
+            <param name="paramterContainer">控制項容器</param>
+            <param name="xmlDoc"></param>
+        </member>
+        <member name="M:XmlAccess.XmlAccessor.WriteXML(System.Object,System.String)">
+            <summary>
+            將物件序列化存成XML.資料夾不存在會自動建立。
+            </summary>
+            <param name="obj">可序列化物件</param>
+            <param name="filePath">存檔路徑</param>
+        </member>
+        <member name="M:XmlAccess.XmlAccessor.ReadXML(System.String,System.Type)">
+            <summary>
+            請改用泛型方法ReadXML&lt;T&gt;，以省略型別轉換。
+            </summary>
+            <param name="filePath"></param>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XmlAccess.XmlAccessor.ReadXML``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

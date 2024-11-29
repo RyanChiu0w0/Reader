@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Logger</name>
+    </assembly>
+    <members>
+        <member name="M:Logger.ContinusLogger.#ctor(System.String)">
+            <summary>
+            檔案保持開啟
+            </summary>
+            <param name="rootFolder">Logs資料夾的上層資料夾</param>
+        </member>
+        <member name="M:Logger.ContinusLogger.Close">
+            <summary>
+            Close and Dispose all of StreamWriter.
+            </summary>
+        </member>
+        <member name="T:Logger.StaticLogger">
+            <summary>
+            將記錄檔寫在Application.StartupPath\Logs中。
+            </summary>
+        </member>
+        <member name="M:Logger.StaticLogger.WriteLog(System.String,System.String)">
+            <summary>
+             將記錄檔寫在Application.StartupPath\Logs中。
+            </summary>
+            <param name="str"></param>
+            <param name="note"></param>
+        </member>
+        <member name="M:Logger.StaticLogger.WriteLog(System.Exception,System.String)">
+            <summary>
+            將exception寫入文字檔中。(含innerException)
+            </summary>
+            <param name="ex"></param>
+            <param name="note"></param>
+        </member>
+    </members>
+</doc>

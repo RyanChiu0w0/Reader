@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Reader</name>
+    </assembly>
+    <members>
+        <member name="M:Reader.CS.BarcodeValidator.#ctor(System.String,System.String,System.Int32,System.Collections.Specialized.StringCollection,Logger.LoggerTxt,MySql.Data.MySqlClient.MySqlConnection)">
+            <summary>
+            驗証噴印的條碼是否正確。
+            </summary>
+            <param name="location"></param>
+            <param name="listenIP"></param>
+            <param name="listenPort"></param>
+            <param name="readerIP"></param>
+            <param name="logger"></param>
+            <param name="conn"></param>
+        </member>
+        <member name="F:Reader.Form1.components">
+            <summary>
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Reader.Form1.Dispose(System.Boolean)">
+            <summary>
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Reader.Form1.InitializeComponent">
+             <summary>
+             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
+            
+             </summary>
+        </member>
+        <member name="M:Reader.FormReader2Example.#ctor">
+            <summary>
+            Reader2 class 範例
+            </summary>
+        </member>
+        <member name="F:Reader.FormReader2Example.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Reader.FormReader2Example.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Reader.FormReader2Example.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Reader.Program.Main">
+            <summary>
+            應用程式的主要進入點。
+            </summary>
+        </member>
+        <member name="T:Reader.Reader3">
+            <summary>
+            取值時才啟動監聽等待連線建立，取完值後(或Timeourt)立即中斷連線並停止監聽。(只接收，不觸發讀取)
+            </summary>
+        </member>
+        <member name="F:Reader.Reader3.Timeout">
+            <summary>
+            ms
+            </summary>
+        </member>
+        <member name="M:Reader.Reader3.GetData">
+            <summary>
+            從讀碼器取值。取值時才啟動監聽並等待連線建立，取完值後(或Timeourt)立即中斷連線並停止監聽。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Reader.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強類型資源類別。
+            </summary>
+        </member>
+        <member name="P:Reader.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:Reader.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強類型資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="T:Reader.ReaderListener">
+            <summary>
+            單一連線通訊(一次只能處理一個連線)
+            </summary>
+        </member>
+        <member name="M:Reader.ReaderListener.#ctor(System.String,System.Int32,System.Collections.Specialized.StringCollection)">
+            <summary>
+            接收讀碼器ip在readerIPCollection中的資料。
+            </summary>
+            <param name="listenIP"></param>
+            <param name="listenPort"></param>
+            <param name="readerIPCollection"></param>
+        </member>
+        <member name="M:Reader.ReaderListener.SendCmdToReader(System.String)">
+            <summary>
+            傳送指令到第一個讀碼器。
+            </summary>
+            <param name="cmd"></param>
+        </member>
+        <member name="T:Reader.Reader2">
+            <summary>
+            start()後持續監聽指定的IP與Port，直到stop.需指定onReceiveData event.
+            若使用ReadBarcode()，則不需執行start(), 且不需指定onReceiveData event.
+            </summary>
+        </member>
+        <member name="F:Reader.Reader2.Timeout">
+            <summary>
+            ms; def:5000
+            </summary>
+        </member>
+        <member name="M:Reader.Reader2.Start">
+            <summary>
+            開始監聽指定Port.
+            </summary>
+        </member>
+        <member name="M:Reader.Reader2.Stop">
+            <summary>
+            停止監聽
+            </summary>
+        </member>
+        <member name="M:Reader.Reader2.ReadBarcode">
+            <summary>
+            觸發讀取條碼,回傳讀到的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Reader.Reader2.ReadBarcode(System.String)">
+            <summary>
+            以指定儲存區讀取barcode,未讀到回傳空字串
+            </summary>
+            <param name="bankNo">儲存區ID (01~16)</param>
+            <returns>讀取值</returns>
+        </member>
+        <member name="M:Reader.Reader2.Send(System.String)">
+            <summary>
+            傳送指令到讀碼器(指令前後自動加STX,ETX)
+            </summary>
+            <param name="cmd"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
